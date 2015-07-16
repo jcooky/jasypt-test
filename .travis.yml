@@ -8,3 +8,4 @@ before_script:
 script:
   - mvn clean package
   - python jandy-runner.egg java -jar jasypt-test-1.0-SNAPSHOT.jar
+  - ls -al
