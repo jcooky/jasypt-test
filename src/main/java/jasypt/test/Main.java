@@ -5,6 +5,7 @@ import org.jasypt.util.password.PasswordEncryptor;
 import org.jasypt.util.password.StrongPasswordEncryptor;
 import org.jasypt.util.text.BasicTextEncryptor;
 import org.jasypt.util.text.StrongTextEncryptor;
+import org.jasypt.util.text.TextEncryptor;
 
 /**
  * @author JCooky
@@ -12,7 +13,7 @@ import org.jasypt.util.text.StrongTextEncryptor;
  */
 public class Main {
   public static void main(String[] args) {
-    BasicPasswordEncryptor passwordEncryptor = new BasicPasswordEncryptor();
+    PasswordEncryptor passwordEncryptor = new StrongPasswordEncryptor();
     String encryptedPassword = passwordEncryptor.encryptPassword(args[0]);
 
     BasicTextEncryptor textEncryptor = new BasicTextEncryptor();
