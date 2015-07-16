@@ -1,0 +1,10 @@
+language: java
+jdk:
+  - oraclejdk7
+
+install: /bin/true
+before_script:
+  - wget http://jandy.io/jandy-runner.egg
+script:
+  - mvn clean package
+  - python jandy-runner.egg java -jar jasypt-test-1.0-SNAPSHOT.jar
