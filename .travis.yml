@@ -7,5 +7,5 @@ before_script:
   - wget http://jandy.io/jandy-runner.egg
 script:
   - mvn clean package
-  - python jandy-runner.egg java -jar jasypt-test-1.0-SNAPSHOT.jar
+  - python jandy-runner.egg java -jar target/jasypt-test-1.0-SNAPSHOT.jar
   - ls -al
