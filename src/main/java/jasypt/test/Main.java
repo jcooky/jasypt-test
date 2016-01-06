@@ -13,7 +13,7 @@ import org.jasypt.util.text.TextEncryptor;
  */
 public class Main {
   public static void main(String[] args) {
-    PasswordEncryptor passwordEncryptor = new StrongPasswordEncryptor();
+    PasswordEncryptor passwordEncryptor = new BasicPasswordEncryptor();
     String encryptedPassword = passwordEncryptor.encryptPassword(args[0]);
 
     BasicTextEncryptor textEncryptor = new BasicTextEncryptor();
