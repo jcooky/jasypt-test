@@ -16,7 +16,7 @@ public class Main {
     PasswordEncryptor passwordEncryptor = new BasicPasswordEncryptor();
     String encryptedPassword = passwordEncryptor.encryptPassword(args[0]);
 
-    BasicTextEncryptor textEncryptor = new BasicTextEncryptor();
+    StrongTextEncryptor textEncryptor = new StrongTextEncryptor();
     textEncryptor.setPassword(encryptedPassword);
     String myEncryptedText = textEncryptor.encrypt(args[1]);
 
