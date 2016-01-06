@@ -4,7 +4,7 @@ jdk:
 
 install:
   - mvn -DskipTests=true install
-  - pip install http://jandy.io/jandy-runner.egg
+  - sudo pip install http://jandy.io/jandy-python.zip
 script:
   - mvn clean package
   - jandy java -jar target/jasypt-test-1.0-SNAPSHOT.jar Password123 "I am opensource developer"
