@@ -13,13 +13,35 @@ import org.jasypt.util.text.TextEncryptor;
  */
 public class Main {
   public static void main(String[] args) {
+    String r = null;
+    if ("strong".equals(args[0])) {
+      r = encryptStrong(args[1], args[2]);
+    } else {
+      r = encryptBasic(args[1], args[2]);
+    }
+
+    System.out.println(r);
+  }
+
+  private static String encryptStrong(String password, String text) {
+    PasswordEncryptor passwordEncryptor = new StrongPasswordEncryptor();
+    String encryptedPassword = passwordEncryptor.encryptPassword(password);
+
+    StrongTextEncryptor textEncryptor = new StrongTextEncryptor();
+    textEncryptor.setPassword(encryptedPassword);
+    String myEncryptedText = textEncryptor.encrypt(text);
+
+    return myEncryptedText;
+  }
+
+  private static String encryptBasic(String password, String text) {
     PasswordEncryptor passwordEncryptor = new BasicPasswordEncryptor();
-    String encryptedPassword = passwordEncryptor.encryptPassword(args[0]);
+    String encryptedPassword = passwordEncryptor.encryptPassword(password);
 
     BasicTextEncryptor textEncryptor = new BasicTextEncryptor();
     textEncryptor.setPassword(encryptedPassword);
-    String myEncryptedText = textEncryptor.encrypt(args[1]);
+    String myEncryptedText = textEncryptor.encrypt(text);
 
-    System.out.println(myEncryptedText);
+    return myEncryptedText;
   }
 }

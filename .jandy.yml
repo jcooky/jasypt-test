@@ -1,0 +1,7 @@
+language: java
+
+samples:
+  - id: testEncryptionStrong
+    script: java -jar target/jasypt-test-1.0-SNAPSHOT.jar strong PasswordPasswordPassword123 "I am opensource developer or I am opensource developer or I am opensource developer"
+  - id: testEncryptionBasic
+    script: java -jar target/jasypt-test-1.0-SNAPSHOT.jar basic PasswordPasswordPassword123 "I am opensource developer or I am opensource developer or I am opensource developer"
