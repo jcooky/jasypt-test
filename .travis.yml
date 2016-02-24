@@ -7,4 +7,4 @@ install:
   - sudo pip install http://dev.jandy.io/jandy-python.zip
 script:
   - mvn clean package
-  - DEV=true jandy
+  - jandy
