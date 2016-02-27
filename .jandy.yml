@@ -1,0 +1,23 @@
+language: java
+
+samples:
+  - id: testEncryptionStrong1
+    script: java -jar target/jasypt-test-1.0-SNAPSHOT.jar strong PasswordPasswordPassword123 "I am opensource developer or I am opensource developer or I am opensource developer"
+  - id: testEncryptionBasic1
+    script: java -jar target/jasypt-test-1.0-SNAPSHOT.jar basic PasswordPasswordPassword123 "I am opensource developer or I am opensource developer or I am opensource developer"
+  - id: testEncryptionStrong2
+    script: java -jar target/jasypt-test-1.0-SNAPSHOT.jar strong PasswordPassword123 "I am opensource developer or I am opensource developer"
+  - id: testEncryptionBasic2
+    script: java -jar target/jasypt-test-1.0-SNAPSHOT.jar basic PasswordPassword123 "I am opensource developer or I am opensource developer"
+  - id: testEncryptionStrong3
+    script: java -jar target/jasypt-test-1.0-SNAPSHOT.jar strong Password123 "I am opensource developer"
+  - id: testEncryptionBasic3
+    script: java -jar target/jasypt-test-1.0-SNAPSHOT.jar basic Password123 "I am opensource developer"
+  - id: testEncryptionStrong4
+    script: java -jar target/jasypt-test-1.0-SNAPSHOT.jar strong 123 ""
+  - id: testEncryptionBasic4
+    script: java -jar target/jasypt-test-1.0-SNAPSHOT.jar basic 123 ""
+  - id: testEncryptionStrong5
+    script: java -jar target/jasypt-test-1.0-SNAPSHOT.jar strong "" ""
+  - id: testEncryptionBasic5
+    script: java -jar target/jasypt-test-1.0-SNAPSHOT.jar basic "" ""
